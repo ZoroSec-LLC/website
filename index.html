@@ -27,7 +27,14 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "3-u7mFzDxKkL8ADrX",
+      });
+   })();
+  </script>
 
 </head>
 
@@ -762,31 +769,31 @@
                 <div class="row gy-4">
 
                   <div class="col-md-6">
-                    <input type="text" name="first" class="form-control" placeholder="First Name" required="">
+                    <input type="text" id="first" name="first" class="form-control" placeholder="First Name" required="">
                   </div>
 
                   <div class="col-md-6">
-                    <input type="text" name="last" class="form-control" placeholder="Last Name" required="">
+                    <input type="text" id="last" name="last" class="form-control" placeholder="Last Name" required="">
                   </div>
 
                   <div class="col-md-6">
-                    <input type="text" name="phone" class="form-control" placeholder="Your Phone" required="">
+                    <input type="text" id="phone" name="phone" class="form-control" placeholder="Your Phone" required="">
                   </div>
 
                   <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required="">
                   </div>
 
                   <div class="col-12">
-                    <input type="text" class="form-control" name="business" placeholder="Business Name" required="">
+                    <input type="text" class="form-control" id="business" name="business" placeholder="Business Name" required="">
                   </div>
 
                   <div class="col-12">
-                    <input type="text" class="form-control" name="website" placeholder="Your Website" required="">
+                    <input type="text" class="form-control" id="website" name="website" placeholder="Your Website" required="">
                   </div>
 
                   <div class="col-12">
-                    <select name="plan" class="form-control" id="cars">
+                    <select name="plan" class="form-control" id="plan">
                       <option value="free">Free Security Audit</option>
                       <option value="basic">Basic Plan - $199/mo</option>
                       <option value="advanced" selected>Advanced Plan - $499/mo</option>
@@ -795,7 +802,7 @@
                   </div>
 
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    <textarea class="form-control" id="message" name="message" rows="6" placeholder="Message" required=""></textarea>
                   </div>
 
                   <div class="col-12 text-center">
