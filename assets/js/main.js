@@ -169,3 +169,18 @@
 })();
 
 
+/* EmailJS */
+function sendMail(){
+  let parms = {
+    first : document.getElementById("first").value,
+    last : document.getElementById("last").value,
+    business : document.getElementById("business").value,
+    website : document.getElementById("website").value,
+    phone : document.getElementById("phone").value,
+    email : document.getElementById("email").value,
+    plan : document.getElementById("plan").value,
+    message : document.getElementById("message").value,
+  }
+
+  emailjs.send("service_iw0rhom", "template_tbqm2yr", parms).then(alert("Email Sent!"))
+}
